@@ -1,0 +1,13 @@
+class Solution(object):
+    def dominantIndex(self, n):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        num=max(n)
+        k=sorted(n)
+        if 2*k[len(k)-2]<=num:
+            return n.index(num)
+        else:
+            return -1
+            
